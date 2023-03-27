@@ -33,5 +33,5 @@ rl.on("line", async (query) => {
 		return process.exit();
 	process.stdout.write("Loading...");
 	await generateQuery(query);
-	process.stdout.write("You: ");
+	rl.prompt();
 });
