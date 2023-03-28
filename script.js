@@ -37,7 +37,7 @@ rl.on("line", async (query) => {
 		await generateQuery(query);
 		rl.prompt();
 	} catch (error) {
-		console.log(error);
+		console.log(error.data.error);
 		rl.prompt();
 	}
 });
