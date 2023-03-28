@@ -12,7 +12,7 @@ const rl = readline.createInterface({
 });
 
 const configuration = new Configuration({
-	apiKey: process.env.OPENAI_API_KEY,
+	apiKey: process.env.K,
 });
 
 const openai = new OpenAIApi(configuration);
