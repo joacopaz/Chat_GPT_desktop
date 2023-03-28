@@ -28,10 +28,16 @@ const generateQuery = async (query) => {
 };
 
 rl.prompt();
+
 rl.on("line", async (query) => {
-	if (query.split("")[0].toLowerCase() === "e" && query.length === 1)
-		return process.exit();
-	process.stdout.write("Loading...");
-	await generateQuery(query);
-	rl.prompt();
+	try {
+		if (query.split("")[0].toLowerCase() === "e" && query.length === 1)
+			return process.exit();
+		process.stdout.write("Loading...");
+		await generateQuery(query);
+		rl.prompt();
+	} catch (error) {
+		console.log(error);
+		rl.prompt();
+	}
 });
