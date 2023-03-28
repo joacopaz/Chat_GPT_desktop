@@ -3,6 +3,7 @@
 		"dotenv": "^16.0.3",
 		"openai": "^3.2.1"
 	},
+	"type": "commonjs",
 	"name": "chat_gpt",
 	"version": "1.0.0",
 	"main": "index.js",
